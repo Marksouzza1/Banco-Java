@@ -32,7 +32,7 @@ public cadastroClientePF() {
 
     public void iniciarComponentes(){
         setTitle("Menu");
-        setSize(300,300);
+        setSize(600,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(cadastroClientePF);
         setVisible(true);

@@ -23,11 +23,19 @@ public class TipoConta extends JFrame {
             
         }
     });
+
+   btnContaJuridia.addActionListener(new ActionListener() {
+       @Override
+       public void actionPerformed(ActionEvent e) {
+                loginPJ loginPJ = new loginPJ();
+       }
+   });
+
 }
 
     public void iniciarComponentes(){
         setTitle("Menu");
-        setSize(300,300);
+        setSize(600,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(pnlTipoConta);
         setVisible(true);
