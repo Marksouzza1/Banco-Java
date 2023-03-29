@@ -1,5 +1,5 @@
 package entities;
-
+import aplication.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,8 +41,29 @@ public void createListener(){
     btnCadastar.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            validarCadastro();
         }
+
+        private void validarCadastro(){
+            String Email = txtEmail.getText();
+            String Endereco = txtEndereco.getText();
+            String RazaoSocial = txtRazaoSocial.getText();
+            String telefone = txtTelefone.getText();
+            String Senha = new String((pswSenha.getPassword()));
+
+            if (Email.equals("admin") && Senha.equals("admin") ){
+                cadastroClientePJ cadPJ = new cadastroClientePJ();
+                cadPJ.setVisible(true);
+                dispose();
+
+
+
+
+
+            }else {
+                JOptionPane.showMessageDialog( btnCadastar,"Dados Cadastrados");}
+        }
+
     });
 }
 }
