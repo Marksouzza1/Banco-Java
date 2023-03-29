@@ -38,8 +38,26 @@ public void createListener(){
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+          validarCadastro();
         }
+        private void validarCadastro(){
+            String Email = txtEmail.getText();
+            String Senha = new String((pswSenha.getPassword()));
+
+            if (Email.equals("admin") && Senha.equals("admin") ){
+                cadastroClientePJ cadPJ = new cadastroClientePJ();
+                cadPJ.setVisible(true);
+                dispose();
+
+
+            }else {
+                JOptionPane.showMessageDialog( btnLogar,"");}
+        }
+
+
     });
+
+
+
 }
 }
