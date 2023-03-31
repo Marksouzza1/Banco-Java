@@ -1,5 +1,6 @@
 package entities;
-import aplication.*;
+import aplication.TipoConta;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,11 +22,19 @@ public class cadastroClientePJ extends JFrame {
     private JPasswordField pswSenha;
     private JLabel lblSenha;
     private JButton btnCadastar;
-public cadastroClientePJ() {
+    private JButton btnVoltar;
+
+    public cadastroClientePJ() {
     iniciarComponentes();
     createListener();
 
-}
+        btnVoltar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TipoConta tipoConta = new TipoConta();
+            }
+        });
+    }
 
 public void iniciarComponentes(){
     setTitle("Menu");
@@ -45,6 +54,7 @@ public void createListener(){
 
 
         }
+
 
         private void validarCadastro(){
             String Email = txtEmail.getText();

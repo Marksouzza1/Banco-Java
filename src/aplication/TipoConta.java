@@ -1,5 +1,5 @@
 package aplication;
-
+import entities.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,6 +9,7 @@ public class TipoConta extends JFrame {
     private JButton btnContaJuridia;
     private JLabel lblconta;
     private JPanel pnlTipoConta;
+    private JButton listarCadastradosButton;
 
     public TipoConta() {
         iniciarComponentes();
@@ -19,15 +20,17 @@ public class TipoConta extends JFrame {
     btnContaPessoal.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-                telaInicial telaInicial = new telaInicial();
-            
+                cadastroClientePF cadastroClientePF = new cadastroClientePF();
+            dispose();
         }
     });
 
    btnContaJuridia.addActionListener(new ActionListener() {
        @Override
        public void actionPerformed(ActionEvent e) {
-                loginPJ loginPJ = new loginPJ();
+               cadastroClientePJ cadastroClientePJ = new cadastroClientePJ();
+           dispose();
+
        }
    });
 
@@ -39,10 +42,12 @@ public class TipoConta extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(pnlTipoConta);
         setVisible(true);
+
     }
 
     public static void main(String[] args) {
         TipoConta tipoConta = new TipoConta();
+
     }
 
 }

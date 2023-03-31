@@ -22,15 +22,6 @@
           <text value="Conta Pessoal"/>
         </properties>
       </component>
-      <component id="d0b3f" class="javax.swing.JButton" binding="btnContaJuridia">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <text value="Conta Juridica"/>
-        </properties>
-      </component>
       <component id="692f5" class="javax.swing.JLabel" binding="lblconta">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -39,6 +30,24 @@
         <properties>
           <font size="20"/>
           <text value="Escolha o seu tipo de conta"/>
+        </properties>
+      </component>
+      <component id="d0b3f" class="javax.swing.JButton" binding="btnContaJuridia">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Conta Juridica"/>
+        </properties>
+      </component>
+      <component id="6884d" class="javax.swing.JButton" binding="listarCadastradosButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Listar cadastrados"/>
         </properties>
       </component>
     </children>
