@@ -42,6 +42,7 @@ public class cadastroClientePF extends JFrame{
     public cadastroClientePF() {
     iniciarComponentes();
     createListener();
+        Conecta();
         btnVoltar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
