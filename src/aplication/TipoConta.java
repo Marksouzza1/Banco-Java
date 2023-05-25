@@ -9,7 +9,7 @@ public class TipoConta extends JFrame {
     private JButton btnContaJuridia;
     private JLabel lblconta;
     private JPanel pnlTipoConta;
-    private JButton listarCadastradosButton;
+    private JButton btnlistarCadastradosButton;
 
     public TipoConta() {
         iniciarComponentes();
@@ -31,6 +31,13 @@ public class TipoConta extends JFrame {
                cadastroClientePJ cadastroClientePJ = new cadastroClientePJ();
            dispose();
 
+       }
+   });
+
+   btnlistarCadastradosButton.addActionListener(new ActionListener() {
+       @Override
+       public void actionPerformed(ActionEvent e) {
+           listaDeClientes ls = new listaDeClientes();
        }
    });
 

@@ -1,31 +1,52 @@
 package entities;
 
+import aplication.TipoConta;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
 public class listaDeClientes extends JFrame {
     private JTable tblListaClientes;
     private JButton excluirButton;
+    private JPanel tblClientes;
+    private JButton btnVoltar;
 
     final String URL = "jdbc:mysql://localhost:3306/capitol";
     final String USER = "root";
     final String PASSWORD = "root99";
     final String INSERIR_PF = "INSERT INTO INSERIR_PF(email,telefone,endereco,bairro,razaoSocial,CNPJ) VALUES (?,?,?,?,?,?,?,?,?,?)";
-    final String CONSULTA = "select * from  clientePJ IS NOT NULL" ;
+    final String CONSULTA = "select * from  clientePJ " ;
     final String EXCLUIR_PF = "DELETE FROM clientePessoaJuridica WHERE nome =?";
 
 
 
 
-public listaDeClientes() {}
+public listaDeClientes() {
+    addListener();
+    iniciarComponentes();
+}
 
-
+    public void iniciarComponentes(){
+        setTitle("Menu");
+        setSize(600,600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setContentPane(tblClientes);
+        setVisible(true);
+    }
 public void addListener(){
+
+
+
+    btnVoltar.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            TipoConta tipo = new TipoConta();
+        }
+    });
 
 DefaultTableModel clientePJ = new DefaultTableModel();
 clientePJ.addColumn("email");

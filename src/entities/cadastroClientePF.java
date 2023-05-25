@@ -34,7 +34,7 @@ public class cadastroClientePF extends JFrame{
     final String URL = "jdbc:mysql://localhost:3306/capitol";
     final String USER = "root";
     final String PASSWORD = "root99";
-    final String INSERIR_PF = "INSERT INTO INSERIR_PF(nome, cpf,profissao,renda,bairro,rua,numeroCasa) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    final String INSERIR_PF = "insert into clientePessoaFisica(nome, cpf,profissao,renda,bairro,rua,numeroCasa) VALUES (?,?,?,?,?,?,?)";
     final String CONSULTA = "select * from clientePessoaFisica + clientePJ IS NOT NULL" ;
     final String EXCLUIR_PF = "DELETE FROM clientePessoaFisica WHERE nome =?";
 
@@ -118,13 +118,7 @@ public class cadastroClientePF extends JFrame{
     }
 public void createListener(){
 
-    btnCadastar.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            dispose();
 
-        }
-    });
 }
 }
 
